@@ -7,3 +7,7 @@ build/
 *.iml
 out/
 
+# VSCode
+bin/
+.vscode/
+.settings/
