@@ -11,3 +11,9 @@ out/
 bin/
 .vscode/
 .settings/
+
+# Node Modules
+node_modules/
+
+# Log files
+*.log

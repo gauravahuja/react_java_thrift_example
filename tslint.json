@@ -1,0 +1,11 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-sonarts"
+  ],
+  "jsRules": {},
+  "rules": {},
+  "rulesDirectory": []
+}

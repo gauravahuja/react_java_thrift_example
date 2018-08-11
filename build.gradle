@@ -17,7 +17,7 @@ plugins {
 }
 
 // Define the main class for the application
-mainClassName = 'App'
+mainClassName = 'github.gauravahuja.ReactJavaThriftExample.App'
 
 defaultTasks 'clean', 'build', 'installDist'
 
@@ -34,4 +34,23 @@ repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src_java/main/java']
+        }
+        resources {
+            srcDirs = ['src_java/main/resources']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src_java/test/java']
+        }
+        resources {
+            srcDirs = ['src_java/test/resources']
+        }
+    }
 }
