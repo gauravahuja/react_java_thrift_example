@@ -16,5 +16,5 @@ $ ./gradlew && ./build/install/react_java_thrift_example/bin/react_java_thrift_e
 $ yarn install
 $ PATH=$(yarn bin):$PATH
 $ webpack
-$ chrome build_js/www/index.html
+$ firefox build_js/www/index.html
 ```
