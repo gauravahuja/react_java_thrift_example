@@ -1,4 +1,7 @@
 ## react_java_thrift_example
+
+**Not suitable for production use**
+
 A react app with Java thrift server
 
 ### Setup
