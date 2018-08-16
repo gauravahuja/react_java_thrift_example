@@ -1,6 +1,5 @@
 # Gradle
 .gradle/
-build/
 
 # IntelliJ
 .idea/
@@ -17,3 +16,7 @@ node_modules/
 
 # Log files
 *.log
+
+# Build
+build/
+build_js/

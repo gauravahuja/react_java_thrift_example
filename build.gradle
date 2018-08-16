@@ -51,6 +51,10 @@ compileThrift {
     sourceItems('./idl/')
 }
 
+googleJavaFormat {
+    include 'src_java/**/*'
+}
+
 sourceSets {
     main {
         java {

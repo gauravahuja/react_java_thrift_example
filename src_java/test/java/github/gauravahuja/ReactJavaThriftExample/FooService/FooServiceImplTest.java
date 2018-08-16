@@ -16,6 +16,6 @@ public class FooServiceImplTest {
 
   @Test
   public void ping() {
-    assertEquals("pong", fooService.ping());
+    assertEquals("pong-1", fooService.ping());
   }
 }
