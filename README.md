@@ -8,15 +8,17 @@ A react app with Java thrift server
 - Install gradle
 - Install thrift compiler
 - Install yarn
+- ```$ yarn install```
 
 ### Build and run java server
 ```
-$ ./gradlew && ./build/install/react_java_thrift_example/bin/react_java_thrift_example
+$ PATH=$(yarn bin):$PATH
+$ yarn start-server
 ```
 
 ### Build typescript code
 ```
-$ yarn install
 $ PATH=$(yarn bin):$PATH
-$ webpack-dev-server --open
+$ yarn gen-thrift-ts
+$ yarn start-dev
 ```

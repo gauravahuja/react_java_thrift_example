@@ -4,7 +4,14 @@
   "repository": "git@github.com:gauravahuja/react_java_thrift_example.git",
   "author": "Gaurav Ahuja <gauravahuja9@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start-server": "./gradlew && ./build/install/react_java_thrift_example/bin/react_java_thrift_example",
+    "gen-thrift": "thrift --gen js:node -o src_js/ idl/FooService/FooService.thrift",
+    "gen-thrift-ts": "thrift-typescript  --sourceDir idl/ --outDir src_js/gen-ts",
+    "start-dev": "webpack-dev-server --open"
+  },
   "devDependencies": {
+    "@creditkarma/thrift-typescript": "^2.0.6",
     "@types/react": "^16.4.11",
     "@types/react-dom": "^16.0.7",
     "@types/thrift": "^0.10.7",

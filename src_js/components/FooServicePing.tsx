@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as FooService from '../gen-nodejs/FooService';
+import {FooService} from '../gen-ts/github/gauravahuja/ReactJavaThriftExample/FooService';
 import * as Thrift from 'thrift';
 
 interface State { pings: Array<string>}
@@ -20,17 +20,13 @@ export class FooServicePing extends React.Component<{}, State> {
       protocol: protocol,
       path: '/FooService',
     });
-    connection.on('error', (err:any) => console.log(err));
-    //@ts-ignore
+    connection.on('Connection Error: ', (err:any) => console.log(err));
     let client = Thrift.createXHRClient(FooService, connection);
-    client.ping((err: any, data:any) => {
-      if (err) {
-        console.error('Error:', err);
-        alert(err);
-      } else {
-        console.log('Data:', data);
-        this.updatePings(data);
-      }
+    client.ping().then((data: string) => {
+      console.log('Data: ', data);
+      this.updatePings(data);
+    }).catch((err: any) => {
+      console.error('Error: ', err);
     });
   }
 
