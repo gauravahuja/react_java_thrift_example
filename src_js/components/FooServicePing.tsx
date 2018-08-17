@@ -1,6 +1,6 @@
 import * as React from 'react';
-let FooService = require('../gen-nodejs/FooService');
-let Thrift = require('thrift');
+import * as FooService from '../gen-nodejs/FooService';
+import * as Thrift from 'thrift';
 
 interface State { pings: Array<string>}
 
@@ -19,9 +19,9 @@ export class FooServicePing extends React.Component<{}, State> {
       transport: transport,
       protocol: protocol,
       path: '/FooService',
-      origin: 'localhost:8080',
     });
     connection.on('error', (err:any) => console.log(err));
+    //@ts-ignore
     let client = Thrift.createXHRClient(FooService, connection);
     client.ping((err: any, data:any) => {
       if (err) {

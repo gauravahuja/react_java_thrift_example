@@ -10,10 +10,12 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: true,
 });
 
-
 const config = {
   mode: 'development',
   devtool: 'source-map',
+  devServer: {
+    contentBase: BUILD_DIR,
+  },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', 'jsx'],
     alias: {
